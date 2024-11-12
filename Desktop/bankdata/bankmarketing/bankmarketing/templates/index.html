@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Marketing Prediction</title>
+</head>
+<body>
+    <h1>Bank Marketing Prediction</h1>
+    <form action="/predict" method="POST">
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="job">Job:</label><br>
+        <input type="text" id="job" name="job" required><br><br>
+
+        <label for="marital">Marital Status:</label><br>
+        <input type="text" id="marital" name="marital" required><br><br>
+
+        <label for="education">Education:</label><br>
+        <input type="text" id="education" name="education" required><br><br>
+
+        <label for="default">Default:</label><br>
+        <input type="text" id="default" name="default" required><br><br>
+
+        <label for="housing">Housing Loan:</label><br>
+        <input type="text" id="housing" name="housing" required><br><br>
+
+        <label for="loan">Personal Loan:</label><br>
+        <input type="text" id="loan" name="loan" required><br><br>
+
+        <label for="contact">Contact:</label><br>
+        <input type="text" id="contact" name="contact" required><br><br>
+
+        <label for="month">Month:</label><br>
+        <input type="text" id="month" name="month" required><br><br>
+
+        <label for="day_of_week">Day of Week:</label><br>
+        <input type="text" id="day_of_week" name="day_of_week" required><br><br>
+
+        <label for="duration">Duration:</label><br>
+        <input type="number" id="duration" name="duration" required><br><br>
+
+        <label for="campaign">Campaign:</label><br>
+        <input type="number" id="campaign" name="campaign" required><br><br>
+
+        <label for="pdays">Previous Days:</label><br>
+        <input type="number" id="pdays" name="pdays" required><br><br>
+
+        <label for="previous">Previous:</label><br>
+        <input type="number" id="previous" name="previous" required><br><br>
+
+        <label for="poutcome">Previous Outcome:</label><br>
+        <input type="text" id="poutcome" name="poutcome" required><br><br>
+
+        <label for="emp_var_rate">Employment Variation Rate:</label><br>
+        <input type="number" step="0.01" id="emp_var_rate" name="emp_var_rate" required><br><br>
+
+        <label for="cons_price_idx">Consumer Price Index:</label><br>
+        <input type="number" step="0.01" id="cons_price_idx" name="cons_price_idx" required><br><br>
+
+        <label for="cons_conf_idx">Consumer Confidence Index:</label><br>
+        <input type="number" step="0.01" id="cons_conf_idx" name="cons_conf_idx" required><br><br>
+
+        <label for="euribor3m">Euribor 3 Month Rate:</label><br>
+        <input type="number" step="0.001" id="euribor3m" name="euribor3m" required><br><br>
+
+        <label for="nr_employed">Number of Employees:</label><br>
+        <input type="number" step="0.01" id="nr_employed" name="nr_employed" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+    <h2>Prediction Result: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
